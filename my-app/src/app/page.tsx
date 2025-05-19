@@ -1,5 +1,3 @@
-import { spec } from "node:test/reporters";
-
 
 export default function Home() {
   return (
