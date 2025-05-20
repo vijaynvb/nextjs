@@ -1,11 +1,11 @@
 
-export default function DemoParams({params, searchParams}: 
+export default async function DemoParams({params, searchParams}: 
     {
-        params: {pathparamsid: string}, 
-        searchParams: {name?: string}
+        params: Promise<{pathparamsid: string}>, 
+        searchParams: Promise<{name?: string}>
     }) {
-        const { pathparamsid } = params;
-        const name = searchParams.name;
+        const { pathparamsid } = await params;
+        const name = (await searchParams).name;
     return (
       <>
         <h1> Demo Params Page</h1>

@@ -1,17 +1,25 @@
 import { notFound } from "next/navigation";
 
+function getRandamInt(max: Number) {
+    return Math.floor(Math.random() * max);
+}   
+
 type Params = {
-    params: {
+    params: Promise<{
         blogId: string; 
         commentId: string;
-    }
+    }>
 }
-export default  function CommentsDetailsPage(params : Params) {
-    const { blogId, commentId } =  params.params;
-    if(Number(commentId) > 100){
-         notFound();
+export default async function CommentsDetailsPage({ params }: Params) {
+    const { blogId, commentId } = await params;
+    if (Number(commentId) > 100) {
+        notFound();
+    }
+    const randomInt = getRandamInt(2);
+    if(randomInt === 1) {
+        throw new Error("Error in CommentsDetailsPage");
     }
     return (
-      <h1> Blog Details Page {blogId} - Comment ID: {commentId}  </h1>
+      <h1> Blog Details Page {blogId} - Comment ID: {commentId} </h1>
     );
-  }
+}

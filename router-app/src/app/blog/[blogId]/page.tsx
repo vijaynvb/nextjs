@@ -1,11 +1,11 @@
 type Params = {
-    params: {
+    params: Promise<{
         blogId: string; 
-    }
+    }>
 }
 // /blog/1 -> model binding -> blogId = 1
-export default  function BlogDetailsPage(params : Params) {
-    const { blogId } =  params.params;
+export default  async function BlogDetailsPage(params : Params) {
+    const { blogId } = await params.params;
     return (
       <h1> Blog Details Page {blogId}  </h1>
     );
