@@ -48,3 +48,28 @@ update a comment -> put    http://ip:port/v1/api/users/[id]
 delete a comment -> delete http://ip:port/v1/api/users/[id] 
 update specific value in a comment -> patch http://ip:port/v1/api/users/[id]
 
+Curl Requests:
+
+curl --location 'http://localhost:3000/v1/api/comments'
+
+curl --location 'http://localhost:3000/v1/api/comments/1'
+
+curl --location --request PUT 'http://localhost:3000/v1/api/comments/1' \
+--header 'Content-Type: application/json' \
+--data '{
+    "id": 1,
+    "text": "updated comment"
+}'
+
+curl --location --request DELETE 'http://localhost:3000/v1/api/comments/1' \
+--header 'Content-Type: application/json' \
+--data '{
+    "id": 1,
+    "text": "updated comment"
+}'
+
+curl --location 'http://localhost:3000/v1/api/comments' \
+--header 'Content-Type: application/json' \
+--data '{
+    "text" : "New comment from the user"
+}'
