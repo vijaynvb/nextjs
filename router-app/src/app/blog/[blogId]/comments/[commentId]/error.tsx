@@ -5,11 +5,11 @@ import { useRouter } from "next/navigation";
 
 
 type Error = {
-    error: Error;
+    error: { message: string; };
     reset: () => void;
 }
 
-export default function ErrorBoundary({error, reset} : Error) {
+export default function ErrorBoundary({ error, reset } : Error) {
   const router = useRouter();
   const handleRetry = () => {
     startTransition(() => {

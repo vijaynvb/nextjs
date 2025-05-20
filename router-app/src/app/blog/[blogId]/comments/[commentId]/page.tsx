@@ -1,4 +1,5 @@
 import { notFound } from "next/navigation";
+import { parse } from "path";
 
 function getRandamInt(max: Number) {
     return Math.floor(Math.random() * max);

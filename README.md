@@ -73,3 +73,25 @@ curl --location 'http://localhost:3000/v1/api/comments' \
 --data '{
     "text" : "New comment from the user"
 }'
+
+
+Rendering ->
+
+    1. CSR 
+        1. seo 
+        2. performance
+        3. large bundle size 
+        4. spa 
+    2. SSR -> 
+        1. static ssr 
+            1. html for all the routes 
+        2. dynamic ssr 
+            1. server side generation 
+                on demand we generate the html 
+            2. ssr 
+                on demand serve the file 
+    3. Suspence SSR 
+        1. partial load of data from server using chunks 
+    4. RSC -> next js 
+        1. SSC 
+        2. CSC 
