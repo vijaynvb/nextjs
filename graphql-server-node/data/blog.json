@@ -1,0 +1,4 @@
+[
+    { "id": "101", "title": "GraphQL Basics", "authorId": "1" },
+    { "id": "102", "title": "Apollo Server Guide", "authorId": "2" }
+  ]
