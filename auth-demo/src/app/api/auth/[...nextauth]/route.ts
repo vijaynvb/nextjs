@@ -81,8 +81,8 @@ export const authOptions: AuthOptions = {
 export const authOptions1: AuthOptions = {
   providers: [
      GitHubProvider({
-        clientId: process.env.GITHUB_CLIENT_ID || "",
-        clientSecret: process.env.GITHUB_CLIENT_SECRET || "",
+        clientId: process.env.GITHUB_CLIENT_ID || "defaultvalue",
+        clientSecret: process.env.GITHUB_CLIENT_SECRET || "defaultsecret",
         authorization: {
             params: {
                 prompt: "consent",
