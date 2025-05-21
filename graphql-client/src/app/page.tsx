@@ -1,5 +1,6 @@
 import DataDisplay from "@/components/DataDisplay";
 import DataUserDisplay from "@/components/DataUserDisplay";
+import UserForm from "@/components/UserForm";
 import Image from "next/image";
 
 export default function Home() {
@@ -8,7 +9,7 @@ export default function Home() {
       <h1>  data from from graph ql </h1>
       <main className="max-w-4xl mx-auto mt-10">
       <h1 className="text-3xl font-semibold mb-6">All Fetched Data</h1>
-        <DataUserDisplay />
+        <UserForm />
       </main>
     </>
   );
