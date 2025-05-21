@@ -1,6 +1,8 @@
 
 import { redirect } from "next/navigation";
 
+
+
 export default async function About(searchParams: { searchParams: Promise<{name?: string}>}) {
   const { name } = await searchParams.searchParams;
     if(name === "redirect") {
